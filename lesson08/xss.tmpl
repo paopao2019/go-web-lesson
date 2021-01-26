@@ -1,0 +1,12 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <h1>str1: {{ .str1 }}</h1>
+{{/*        内容转义成html文件,即使是 script脚本，默认是不转义的*/}}
+        str2: {{ .str2 |safe }}
+    </div>
+</body>
+</html>

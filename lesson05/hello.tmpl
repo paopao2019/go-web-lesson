@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+</head>
+<body>
+    {{/* 注释内容 注释，执行时会忽略。可以多行。注释不能嵌套，并且必须紧贴分界符始止。
+        1. 可以多行内容
+     */}}
+
+    <p>Map数据</p>
+    <p>姓名:{{ .m.name}}</p>
+    <p>性别{{ .m.age}}</p>
+    <p>年龄:{{ .m.height}}</p>
+    <hr/>
+    <p>结构体数据</p>
+    <p>姓名:{{ .s.Name}}</p>
+    <p>性别:{{ .s.Age}}</p>
+    <p>年龄:{{ .s.Height}}</p>
+
+
+<hr/>
+{{/*变量定义    	*/}}
+{{ $v1 := 10 }}
+我的年龄是 数据来自 自定义变量:{{$v1}}
+
+
+<hr/>
+{{/*if语句使用*/}}
+{{ if gt .m.age  10 }}
+我的年龄大于10
+{{ else }}
+我的年龄小于10
+{{end}}
+<hr/>
+{{/*range遍历*/}}
+{{ range $idx, $name := .userList }}
+<p>{{$idx}}-{{$name}}</p>
+{{else}}
+用户列表里面啥也没有
+{{end}}
+<hr>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+
+    <style>
+        * {
+            margin: 0;
+            top: 0;
+        }
+        .nav {
+            height: 50px;
+            width: 100%;
+            background-color: cyan;
+
+        }
+        .menu {
+            position: fixed;
+            top: 50px;
+            height: 100%;
+            width: 20%;
+            background: blue;
+        }
+
+        .content {
+            width: 80%;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+</div>
+<div class="main">
+    <div class="menu">
+
+    </div>
+    <div class="content center">
+        {{block "content" .}}
+        {{end}}
+    </div>
+</div>
+
+
+
+</body>
+</html>

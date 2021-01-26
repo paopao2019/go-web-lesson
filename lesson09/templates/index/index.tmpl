@@ -1,0 +1,21 @@
+{{/*注意开头 define 与结尾 end 不可少*/}}
+{{ define "index/index.tmpl" }}
+
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/base.css">
+</head>
+<body>
+<div>
+    {{ .name }}
+    <br>
+    {{ .link}}
+    <br>
+    {{ .link |safe}}
+
+</div>
+
+<script src="/static/js/base.js"></script>
+</body>
+</html>
+{{end}}
