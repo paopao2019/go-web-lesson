@@ -53,7 +53,7 @@ func main() {
 		CaptchaId := c.Query("captchaId")
 		Captcha := c.Query("captcha")
 
-		fmt.Printf("id:%s 字符:%s", CaptchaId, Captcha)
+		fmt.Printf("id:%s 字符:%s\n", CaptchaId, Captcha)
 		// http://tool.chinaz.com/tools/imgtobase/ 还原图片测试这个接口
 		// 同时在内存清理掉这个图片
 		if store.Verify(CaptchaId, Captcha, true) {
