@@ -46,6 +46,14 @@ func Captcha(c *gin.Context) {
 func main() {
 	r := gin.Default()
 
+	r.GET("/", func(c *gin.Context) {
+		a := 1
+		b := 2
+		var e int
+		e = a + b
+		fmt.Printf("a+b: %d\n", e)
+		c.String(http.StatusOK, "ok")
+	})
 	r.POST("/base/captcha", Captcha)
 
 	// 如发送 http://127.0.0.1:9090/base/verify?captchaId=Fh970kCUVnQHaVg6B0sE&captcha=634647
