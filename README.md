@@ -29,7 +29,16 @@
 	- 方法1. 使用 gin.H 自己拼接json 其实就是map
 	- 方法2. 使用结构体 还要学会灵活使用tag对结构体字段做定制化操作
 
+## lesson26 GORM 删除
+    - 软删除 引用了gorm.Model公用结构体的才有
+    - 删除记录 根据主键id 
+    - 删除记录 根据 where条件 
+        db.Debug().Where("age >= ?", 10).Delete(&User{})
+    - 物理删除 Unscoped().Where
 
+## lesson25 JWT的生成和创建
+    - createToken
+    - ParseToken
 ## lesson26 中间件middleware JWT 
 	- 学习如何使用JWT
 	- CreateToken
