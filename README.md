@@ -59,7 +59,7 @@
     - 学会创建验证码和校验验证码 
     - 思考前后端如何交互****
     
-## lesson29 debug学习
+## lesson29 goland debug学习
     资料来自 https://zhuanlan.zhihu.com/p/62610785
     什么是debug: 
     断点调试，英文 breakpoint。用大白话来解释下，断点调试其实就是在程序自动运行的过程中，
@@ -75,3 +75,9 @@
     - Alt+F9 直接到下一个断点
     
     几个按钮看需求配合使用
+    
+## lesson30 viper和结构体配置文件
+    1. vipper 初始  v.SetConfigFile(config)
+    2. 和定义的结构体对应起来使用  -- 实际应用中别  v.Unmarshal(&global.GVA_CONFIG)
+    3. WatchConfig 在线更改配置文件
+ 
